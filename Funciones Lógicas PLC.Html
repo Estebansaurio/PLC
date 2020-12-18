@@ -1,0 +1,201 @@
+<Html>
+<Head>
+
+<Title>Funciones Logicas Basicas</Title>
+
+</Head>
+
+<h1 align="center"><face="Comic Sans MS">Funciones Logicas Basicas</h1>
+
+<Body background="https://img.freepik.com/vector-gratis/fondo-patron-rombos-dorados-simetricos_1183-364.jpg?size=338&ext=jpg">
+
+<p><h1 align="center">Tabla de contenido</h1></p>
+
+<p><h3 align="center">Introduccion.........................................................................1</h3></p>
+
+<p><h3 align="center">Desarrollo.............................................................................2</h3></p>
+
+<ul>
+<p><h3 align="center">Control.........................................................................2</h3></p>
+</ul>
+
+<ul>
+<p><h3 align="center">Señales electricas.........................................................3</h3></p>
+</ul>
+
+<ul>
+<p><h3 align="center">La programacion de escalera en el PLC...................4</h3></p>
+</ul>
+
+<ul>
+<p><h3 align="center">Compuertas Logicas...................................................5</h3></p>
+</ul>
+
+<ul>
+<p><h3 align="center">Ejemplos de compuertas logicas................................6</h3></p>
+</ul>
+
+<ul>
+<p><h3 align="center">Problematica...............................................................7</h3></p>
+</ul>
+
+<p><h3 align="center">Conclusion...........................................................................8</h3></p>
+
+<p><h3 align="center">Referencias...........................................................................9</h3></p>
+
+<p><font color="Red" face="Comic Sans MS"><h1 align="Justify">1.1 introducción</h1></p>
+<ul>
+<p><font color="Black" face="Comic Sans MS"><h3 align="Justify">La automatización nace a partir de tener que usar máquinas para realizar tareas tanto complejas como de una manera más rápida. Esto claramente  sin la intervención del hombre. En muchas partes de la industria la automatización es de vital importancia, por ejemplo: aeronáutica, comunicaciones, manufactura,  etc. Además de algunas ventajas ya antes mencionadas, una que tampoco se queda atrás es la precisión, pues sabemos que los seres humanos podemos llegar a equivocarnos  en cualquier momento, y errores así, pueden costar caro.</h3></p>
+</ul>
+<ul>
+<p><h3 align="Justify">Ahora bien, la industria aplica la automatización en sistemas de control, que ciertos dispositivos sean capaces de interactuar con otros componentes sin ninguna complicación. Esto se logra ya sea por programas que manejan diferentes variables, monitoreando y comparando los resultados del proceso. Generando así mayor productividad, confiabilidad, estabilidad y calidad de los resultados.
+En este ensayo se verá un ejemplo de un PLC. Un controlador lógico programable, más conocido por sus siglas en inglés PLC (Programmable Logic Controller). Este, comenzó en 1960, en la industria automotriz con la empresa “General Motors”, la razón principal de su implementación fue porque se buscaba eliminar el costo alto del sistema de control basado en relés y contactares.</h3></p>
+</ul>
+<ul>
+<p><h3 align="Justify">Los PLC no solamente controlan funciones lógicas, sino procesos más complejos como operaciones aritméticas y tratamiento de señales analógicas para crear estrategias de control. Grandes empresas que suelen usar bandas transportadoras, brazos hidráulicos, etc.</h3></p>
+<p><h3 align="Justify">Aunque hablaremos sobre el PLC, las problemáticas, se tratarán más específicamente sobre las compuertas o funciones lógicas. Estas funciones son básicas para ir familiarizándose con la automatización, pues no son tan complejas y sus fórmulas junto con sus tablas de verdad son sencillas y fáciles de entender.</h3></p>
+</ul>
+
+<div align="Center"><img src="https://www.zultronica.com/wp/wp-content/uploads/2019/07/abc.jpg"></div>
+
+<p><h1 align="Justify"><font color="Red" face="Comic Sans MS">2. Desarrollo</h1></p>
+
+<p><h2 align="Justify"><font color="Red" face="Comic Sans MS">2.1 Control</h2></p>
+<ul>
+<p><h3 align="Justify"><font color="Black" face="Comic Sans MS">Es el proceso de un sistema, en donde influyen magnitudes de entradas sobre magnitudes de salida debido a la lógica interna del sistema.
+Y existen 2 tipos de control, de lazo abierto y lazo cerrado.</h3></p>
+</ul>
+<ul>
+<p><h3 align="Justify">En el de lazo abierto no se toma en cuenta la variable perturbadora que existe en medio del trabajo, o bien, no hay una corrección en el error de la salida provocada por la variable perturbadora.</h3></p>
+</ul>
+<div align="center"><img src="https://instrumentacionycontrol.net/wp-content/uploads/2017/10/1.2.gif">
+<ul>
+<p><h3 align="Justify">Este tipo de control no funciona cuando se requiere un grado alto de exactitud o precisión.</h3></p>
+</ul>
+<ul>
+<p><h3 align="Justify">Después tenemos el control de lazo cerrado, este cuenta con dispositivos de retroalimentación, que permite conocer el valor de la salida, ya sea un comparador que determine la diferencia entre entradas y salidas y otro dispositivo para que compense el error existente en la salida.</h3></p>
+</ul>
+<div align="center"><img src="https://lh3.googleusercontent.com/B5jhcRU1BBa1IglJNGaVnbJxmZWHBLpnpJiF2Ut6brjV9UvFRo1TpZVsZn0dF0FQ5jq3eMLp98OzNuMzTlNDMLmeKR4Tj_QcZeB8akd6yi5EW7lDT8bBfshDQjW5lyBREpQE7wPaUvpbF0iGLD4Xc7vJX58AJ8wZu6aKmxNwP5GUid-soT7IRuqzDNr08ONA05oOSQoOMTBynsw7b4i5cWWElTFwdUGWCWc_CkuynsGgW8D44UQbBL245apiAty7X-QI7RGk_38-FVkwZY0JvIdDntE7ngGP5GlpV7HeA3B1mk5ePsfPTlrehFTYqQLydotMISmoYe4fP8cZfoHYxBgcmV8Jbkx4N8LW938zit0Tn8OjiNMLSZXmrbh7ufLkFokwJA9DG2slDrTdMe-m9R-sOO5S3-r0UMVqu2hWQTKVWZDBHHb0Xa_15t2A8-iZbJMizQ0lM6v9b-3qN1MlPnWGSnpTYvNnV5rajIYTnQzpvluODg88M3SbBytTZw2vf4nCGX7dniWD6hdOTublsRUjnK87riUm4oZbaB10sDT58cceisMiAqy9A1ozbyI7H69ckjajGP7FAdY4M-vvNXhkNTbY6WqFE3niSruvqKUo-uH7t47j_4Jw0a-YiEO5kQT-0JCOH9ac4vm68AxmiM_n2oarjtMN=w514-h144-no"></div>
+<ul>
+<p><h3 align="justify">Las funciones lógicas al ser exactas se podrían decir que pertenecen a un control de lazo cerrado.</h3></p>
+</ul>
+<ul>
+<p><h2 align="Justify"><font color="Red">2.2 Señales Electricas</h2></p></font>
+</ul>
+<ul>
+<p><h3 align="Justify">Una señal es como una información que se ve representada por un valor o por el cambio de valor de una magnitud.</h3></p>
+</ul>
+<ul>
+<p><h3 align="Justify">Estas se dividen en 2: analógicas y discretas</h3></p>
+</ul>
+<ul>
+<p><h3 align="Justify">La analógica ofrece diferentes informaciones en cada punto de un margen de valores </h3></p
+</ul>
+<Div align="Center"><img src="data:image/png;base64,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">
+
+<p><h3 align="Justify">La señal discreta solamente permite una cantidad limitada de valores en un margen determinado y a la vez, esta se divide en 2: digital y binaria. Pero solo hablaremos de la señal binaria que es la usada por las funciones lógicas.</h3></p>
+<p><h3 align="Justify">La señal binaria se relaciona solamente con 2 valores: verdadero o falso.</h3></p>
+
+<div align="Center"><img src="https://programas.cuaed.unam.mx/repositorio/moodle/pluginfile.php/824/mod_resource/content/5/contenido/img/digital.png" widthy=
+"400" height="200">
+
+<p><h2 align="Justify"><font color="Red">2.3 La programacion de escalera en PLC</h2></p></font>
+
+<p><h3 align="Justify">Esta programación es la que se usa para las funciones lógicas, y se explicara algunas partes o funciones básicas para programar</h3></p>
+
+<img src="https://bookdown.org/alberto_brunete/intro_automatica/Figuras/metodosrepresentacion/diagramakop.png" widthy=
+"300" height="300">
+
+<p><h3 align="Justify">Hay muchas más instrucciones, pero estas son las que se usan para hacer las funciones lógicas.</h3></p>
+
+<p><h2 align="Justify"><font color="Red">2.4 Compuertas Logicas</h2></p></font>
+<ul>
+<p><h3 align="Justify"><fotn color="Black">Las compuertas o funciones lógicas son dispositivos que trabajan con estados binarios (0 y 1), tanto es las entradas como en las salidas. Todas las compuertas lógicas están asociadas a su propia tabla de verdad, donde se ve el estado de cada entrada y salida.</font></h3></p>
+</ul>
+<p><h3 align="Justify">Las más comunes son: AND, OR, NOT, NAND, NOR, EXOR.</h3></p>
+
+<ul>
+<p><h3 align="Justify"><font color="Black">AND: tiene 2 entradas, y su operación lógica es un producto entre ambas.</h3></p></font>
+</ul>
+<ul>
+<p><h3 align="Justify"><font color="Black">OR: tiene 2 entradas y la operación lógica será una suma entre las dos, (excepto cuando es 1+1=1, pues recordemos que son resultados binarios).</h3></p>
+</ul>
+<ul>
+<p><h3 align="Justify"><font color="Black">NOT: Es un inversor, es decir, invertirá el dato de la entrada, por ejemplo, si la entrada es 0 la salida será 1. Esta compuerta solo tiene una entrada, su operación es s igual a invertida.</h3></p>
+</ul>
+<ul>
+<p><h3 align="Justify"><font color="Black">NAND: Es la inversión del producto lógico de sus entradas, es como si fuera una combinación de AND con NOT.</h3></p>
+</ul>
+<ul>
+<p><h3 align="Justify"><font color="Black">NOR: El resultado obtenido es de la inversión de la operación lógica OR, pero como el ejemplo anterior, es como si le agregaras la compuerta NOT.</h3></p>
+</ul>
+<ul>
+<p><h3 align="Justify"><font color="Black">EXOR: Para este caso tendremos 2 entradas y serán la suma de a y b invertida y a invertida por b.</h3></p>
+</ul>
+
+<p><h2 align="Justify"><font color="Red">2.5 Ejemplos de Compuertas en Simulador de PLC</h2></p></font>
+
+<table border="1">
+<tr>
+ <td><strong><h3 align="center">Funcion Logica</h3></strong></td>
+ <td><strong><h3 align="center">Ejemplo</h3></strong></td>
+ <td><strong><h3 align="center">Funcion Logica</h3></strong></td>
+ <td><strong><h3 align="center">Ejemplo</h3></strong></td>
+</tr>
+
+<tr>
+ <td><h1 align="center">OR</h3></td>
+ <td><div align="center"><img src="https://unicrom.com/wp-content/uploads/compuerta-or.png"</td></div>
+ <td><h1 align="center">AND</h3></td>
+ <td><div align="center"><img src="https://4.bp.blogspot.com/1mGQ7WnRMSdqLGsKK7PmF2sE3aQKLk8Vo0DRvT6gm4la817cyWEYDyixws7lpPH2NuINKXHkUf6eABxQ8wuvKhaeN8z3rbvx5x8LbzsKQvy0OwQ4TTjuOB9_eD6SEBPVZfOs4Q0VKJyj9w432wLcG2t_Ktaj6hmLe-ujYmKyNxgEENDBe7cHAWQkXOOewdCVqA0kciiEWzVPxebrq6KcZ8_u4TubZJkWfkZjNfQCp8KHj8Ai3e5svRSB3Shge-q-o1rXxjWnubOyeP1SX7bP0B81qqHqOt_ELZwS5MrE06XUHdiqm447_w-9uJjdC46ysiu-zXokxmvPELitYa7CyDlmR583yZBet2VBxmQ0KSKlHlVpVP0tU89kPR9rwkYZXKc7VDzoaflB6_Z8zReWLpB_x1FtKSLORGZoDi525vNtKG4SGKETtmex0mWqCn5vOfioeEeE-V1NZ1LL-fj8hCje9aW_k3Y8v0Oq2V9__KID8_8by9lkR2NFu8Z8FiQuG14DTqZJB92O_OQ757DuCpEFcDfuAjXoY82Xy9GlS5j9rgq1pnGLnAqkqDR3Pj1pNBYpUXc53UvnTika9ktb7qh_OHj6ogJBXvjJbtc=w318-h198-no"</td></div>
+</tr>
+
+
+<tr>
+ <td><h1 align="center">NOR</h3></td>
+ <td><div align="center"><img src="https://2.bp.blogspot.com/TRIY8FzMEGvM9IF5HANQlCVHo1YHMgCgAjxtRPUMVDwe-X9_vCIv8wsMPDfGkxRBY4wCpeXZCN_DJH6z1o60Es1dfdOQPvP-L1veGboOwg79UryS0H1pDoKi4C_Y4jTMkyOMxkSg_t1Eyzcy0T9PAo_x7ca46GKPuE9ily-exsN3hXOIvoSYMGeg1qgrv6RiZH6hrbLBcW022B_SZfCj03AqANjMH25LQ4X_3SU0cBzSnJpL4HRjuF9Q1MrwgnJZUcHDbMfw5frv3JKlkoUGmCGOvkS8YRiprJj7HK3qkRHjMiTnYrhbifO5sp75z0QKi4sodFb3LiRhJIT9UXgof6EsctJhkvlaYcQRAnaYeGw4fhQgDfIAKO5gcGWpNHoc3ABH35ZUaYlIh7M9_Jp0MMbIXZnlHaljdk6fsWmKExbZGpfw7ufxEco8twBCz4oEk__ZINbSXVlqCp7Rdq2WuDQ8JB_WT3N3N11mcvPm-qEMtljsyQTQivSNkzK9N7d4B-InVcVHg1Zvz93JgCj6HUMYXHhvHiAHZBQq7lZX3Q8PoNBNjlDvMjgHz_6IPE6ApTI2sTWJtV33tPbm-QQnpem-AhW3QlwwL43Z9ZM=w318-h195-no"</td></div>
+ <td><h1 align="center">NAND</h3></td>
+ <td><div align="center"><img src="https://sites.google.com/site/ovaselectronica/_/rsrc/1467129695059/CONTENIDOS/compuerta-NAND/Compuerta%20NAND.jpg"</td></div>
+</tr>
+
+<tr>
+ <td><h1 align="center">NOT</h3></td>
+ <td><div align="center"><img src="https://develonic.com/wp-content/uploads/2019/06/3010.jpg"</td></div>
+ <td><h1 align="center">EXOR</h3></td>
+ <td><div align="center"><img src="https://illustrationprize.com/images/electronic-terms/exclusive-or-gate-exor-gate.jpg" Width="400" Height="200"</td></div>
+</tr>
+</table>
+<p><h2 align="Justify"><font color="Red">3. Problematica</h2></p></font>
+
+<p><h3 align="Justify"><font color="Black">Analicemos un circuito eléctrico, en el que se encuentran dos interruptores, una lampara y una fuente de alimentación o de poder (en términos generales serían las mismas definiciones).</h3></p></font>
+
+<p><h3 align="Justify"><font color="Black">Para que la lampara sea capaz de encenderse (L=1) se requiere que los interruptores A y B estén cerrados (A=B=1). Si cualquiera de los dos interruptores está en 0 (abierto), la lámpara estará apagada (L=0).</h3></p></font>
+
+<p><h3 align="Justify"><font color="Black">Se puede observar que las variables A y B son independientes, pero a diferencia de la L, es una función lógica de la A y B. </h3></p></font>
+
+<p><h3 align="Justify"><font color="Black">Cualquier circuito lógico tiene una tabla que se llama: “Tabla de la Verdad”, en ella se representan las posibles combinaciones de las entradas (A y B).
+En otros términos, si L = 1 Entonces A Y B son 1. En esta ocasión se ha remarcado letra Y para demostrar que ejecuta una función lógica de Y. Esta función representa la función de L es: L = A AND B. A esta función tambien se le puede llamar “Producto Notable, que se escribiría de forma más simple así: L = A * B
+</h3></p></font>
+
+<div align="center"><img src="https://cdn.pixabay.com/photo/2018/04/21/11/47/lamp-3338289_640.png">
+
+<p><h2 align="Justify"><font color="Red">4. Conclusion</h2></p></font>
+
+<p><h3 align="Justify"><Font color="Black">Los PLC han sido de gran uso y aprovechamiento para toda la industria, desde el año 1960 que se implementó se vieron resultados diferentes y muy positivos que por obvias razones beneficio a la industria, haciendo de los trabajos o procesos menos laboriosos.
+
+Aunque los PLC sirven de mucho, también la persona que quiera manejar o programar uno tiene que tener unas buenas bases de electrónica, pues en casos específicos algunos problemas pueden ser muy revueltos, pero hasta ahora el PLC ha sido la mejor solución a esos problemas.</h3></p></font>
+
+<p><h2 align="Justify"><font color="Red">5. Referencias</h2></p></font>
+
+<ul>
+<p><h3 align="Justify">Molina, W, (2015), Electrónica Digital, Manual de aprendizaje, México</h3></p>
+</ul>
+<ul>
+<p><h3 align="Justify">Salazar, E, (2014), Automatización con PLC, Manual de aprendizaje, México</h3></p>
+
+<p><h3 align="Justify">Goku.com</h3></p>
+
+<div align="Center"><img src="https://www.gensh.in/fileadmin/Database/Characters/Xiao/Character_Xiao_XL.png"</div>
+
+
